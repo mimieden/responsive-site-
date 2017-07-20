@@ -1,0 +1,110 @@
+/* Color
+------------------------------------------------------------*/
+/* Main
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0; }
+
+header div {
+  background-image: url("../images/top.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+main {
+  text-align: center;
+  margin: 50px 0; }
+  main h2 {
+    font-size: 2.4rem; }
+  main div#container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+    main div#container div.color {
+      -webkit-flex: 1;
+      flex: 1;
+      margin: 10px auto;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 98%; }
+      main div#container div.color h3 {
+        font-size: 2.0rem; }
+      main div#container div.color p {
+        font-size: 1.6rem; }
+      main div#container div.color#londontwilight {
+        background-color: #8ea9da; }
+        main div#container div.color#londontwilight h3 {
+          background-color: #1A2D4F;
+          padding: 20px;
+          margin: 0;
+          color: #FFF; }
+      main div#container div.color#midnightblue {
+        background-color: #8b93d5; }
+        main div#container div.color#midnightblue h3 {
+          background-color: #1A1F47;
+          padding: 20px;
+          margin: 0;
+          color: #FFF; }
+      main div#container div.color#londongold {
+        background-color: #fdf0dd; }
+        main div#container div.color#londongold h3 {
+          background-color: #CC7F0F;
+          padding: 20px;
+          margin: 0;
+          color: #FFF; }
+
+footer {
+  text-align: center;
+  background-color: #fdf0dd;
+  padding: 50px 0; }
+  footer div h2 {
+    margin-top: 0;
+    font-size: 2.4rem; }
+  footer div a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #FFF; }
+    footer div a div {
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      width: 98%;
+      background-color: #1A2D4F;
+      color: #FFF;
+      margin: auto;
+      padding: 5px 0; }
+    footer div a:visited {
+      color: #FFF; }
+    footer div a:focus {
+      color: #FFF; }
+    footer div a:hover {
+      color: #FFF; }
+    footer div a:active {
+      color: #FFF; }
+
+/* Desktop
+------------------------------------------------------------*/
+@media (min-width: 769px) {
+  header div {
+    height: 500px; }
+
+  main div#container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-around; }
+    main div#container div.color {
+      margin: 0 10px;
+      width: 32%; }
+
+  footer div a div {
+    width: 32%; }
+  footer div a:hover div {
+    background-color: #33599c; } }
+
+/*# sourceMappingURL=style.css.map */

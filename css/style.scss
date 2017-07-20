@@ -1,0 +1,141 @@
+@import "compass";
+
+/* Color
+------------------------------------------------------------*/
+$londontwilight: #1A2D4F;
+$midnightblue: #1A1F47;
+$londongold: #CC7F0F;
+
+/* Main
+------------------------------------------------------------*/
+html {
+    font-size:62.5%;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    div {
+        background-image: url("../images/top.jpg");
+        height: 250px;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+
+main {
+    text-align: center;
+    margin: 50px 0;
+    h2 {
+        font-size: 2.4rem;
+    }
+    div#container {
+        @include display-flex;
+        @include flex-direction(column);
+        div.color {
+            @include flex(1);
+            margin: 10px auto;
+            h3 {
+                font-size: 2.0rem;
+            }
+            p {
+                font-size:1.6rem;
+            }
+            @include box-sizing(border-box);
+            width: 98%;
+            &#londontwilight {
+                background-color: lighten($londontwilight, 50%);
+                h3 {
+                    background-color: $londontwilight;
+                    padding: 20px;
+                    margin: 0;
+                    color: #FFF;
+                }
+            }
+            &#midnightblue {
+                background-color: lighten($midnightblue, 50%);
+                h3 {
+                    background-color: $midnightblue;
+                    padding: 20px;
+                    margin: 0;
+                    color: #FFF;                    
+                }
+            }
+            &#londongold {
+                background-color: lighten($londongold, 50%);
+                h3 {
+                    background-color: $londongold;
+                    padding: 20px;
+                    margin: 0;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: lighten($londongold, 50%);
+    padding: 50px 0;
+    div { 
+        h2 {
+            margin-top:0;
+            font-size: 2.4rem;
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.6rem;
+            div {
+                @include border-radius(10px);
+                width: 98%;
+                background-color: $londontwilight;
+                color: #FFF;
+                margin: auto;
+                padding: 5px 0;
+            }
+            @include link-colors(#FFF, #FFF, #FFF, #FFF, #FFF);
+        }
+    }
+}
+
+/* Desktop
+------------------------------------------------------------*/
+@media (min-width: 769px) {
+    header {
+        div{
+            height: 500px;
+        }
+    }
+    
+    main {
+        div#container {
+            @include flex-direction(row);
+            justify-content: space-around;
+            div.color {
+                margin: 0 10px;
+                width: 32%;
+            }
+        }
+    }
+    
+    footer {
+        div {
+            a {
+                div {
+                    width: 32%;
+                }
+                &:hover {
+                    div {
+                        background-color: lighten($londontwilight, 20%);
+                    }
+                }
+            }
+        }
+    }
+}
+
